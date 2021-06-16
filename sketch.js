@@ -82,9 +82,4 @@ function mouseDragged(){
 }
 function mouseReleased(){
   t_r.fly();
-  
-  
-  
-  
-  
 }
