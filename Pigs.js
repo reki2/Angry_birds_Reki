@@ -6,7 +6,13 @@ constructor(x,y,width,height){
   }  
    display(){
 console.log(this.body.speed);
-super.display();
-
+if(this.body.speed < 3){
+  super.display();
+}
+else{
+  push();
+world.remove(world, this.body)
+pop();
+}
    }
 }
