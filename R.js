@@ -30,11 +30,17 @@ this.sling = Constraint.create(options);
     var pointA = this.sling.bodyA.position;
     var pointB  = this.pointB;  
       stroke ("blue");
-      strokeWeight(10);
-      line(pointA.x - 20,pointA.y,pointB.x - 10,pointB.y);
-      line(pointA.x - 20,pointA.y,pointB.x + 30,pointB.y - 5);
-      image(this.sling3,pointA.x -30,pointA.y -10 );
-    
+      if(pointA.x < 145){strokeWeight(10);
+        line(pointA.x - 20,pointA.y,pointB.x - 10,pointB.y);
+        line(pointA.x - 20,pointA.y,pointB.x + 30,pointB.y - 5);
+        image(this.sling3,pointA.x -30,pointA.y -10 );
+      }
+    else{
+      strokeWeight(5);
+      line(pointA.x - 25,pointA.y,pointB.x - 10,pointB.y);
+      line(pointA.x - 25,pointA.y,pointB.x + 30,pointB.y - 5);
+      image(this.sling3,pointA.x +25,pointA.y -10 );
+}
     }
     pop();
   }
