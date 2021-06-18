@@ -15,12 +15,14 @@ this.sling = Constraint.create(options);
   }
   fly(){
     this.sling.bodyA = null;
-    
-    
-    
-    
-    
   }
+
+attach(body){
+this.slim.bodyA = body
+
+
+}
+
   display(){
     image(this.sling1,150,76);
     image(this.sling2,120,76);
@@ -29,7 +31,7 @@ this.sling = Constraint.create(options);
     if(this.sling.bodyA){
     var pointA = this.sling.bodyA.position;
     var pointB  = this.pointB;  
-      stroke ("blue");
+      stroke ("brown");
       if(pointA.x < 145){strokeWeight(10);
         line(pointA.x - 20,pointA.y,pointB.x - 10,pointB.y);
         line(pointA.x - 20,pointA.y,pointB.x + 30,pointB.y - 5);
