@@ -79,3 +79,9 @@ function mouseDragged(){
 function mouseReleased(){
   t_r.fly();
 }
+
+function keyPressed(){
+if(keyCode === 32){
+  t_r.attach (bird.body);
+}
+}
