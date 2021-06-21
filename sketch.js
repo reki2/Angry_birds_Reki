@@ -88,6 +88,6 @@ function mouseReleased(){
 function keyPressed(){
 if(keyCode === 32){
   t_r.attach (bird.body);
-  
+  gameState = "on_Sling"
 }
 }
