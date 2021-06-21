@@ -2,6 +2,8 @@ class Pigs extends Plane{
   
 constructor(x,y,width,height){
    super(x,y,width,height);
+   this.width = width;
+   this.height = height;
     this.image = loadImage("sprites/enemy.png");
     this.Visibility = 255;
   }  
@@ -14,7 +16,7 @@ else{
   push();
   this.Visibility = this.Visibility -5;
   tint(255, this.Visibility);
-  image(this.image, this.body.position.x, this.body.position.y, 50, 50);
+  image(this.image, this.body.position.x, this.body.position.y, this.width, this.height);
 World.remove(world, this.body)
 pop();
 }
