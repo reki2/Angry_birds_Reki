@@ -18,7 +18,7 @@ this.sling = Constraint.create(options);
   }
 
 attach(body){
-this.slim.bodyA = body
+this.sling.bodyA = body
 
 
 }
