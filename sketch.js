@@ -16,12 +16,15 @@ var pig1, pig2, pig3, piggy1, piggy2, piggy3;
 
 var t_r;
 
+var gameState;
+
 function preload() {
  backGround  = loadImage ("sprites/bg.png");
 }
 
 function setup(){
  createCanvas(1200,400);
+ gameState = "on_Sling"
   engine = Engine.create();
   world = engine.world;
   
@@ -74,14 +77,17 @@ function draw(){
   t_r.display();
 }
 function mouseDragged(){
+  if(gameState != "launched")
   Matter.Body.setPosition(bird.body,{x : mouseX,y : mouseY})
 }
 function mouseReleased(){
   t_r.fly();
+  gameState = "launched"
 }
 
 function keyPressed(){
 if(keyCode === 32){
   t_r.attach (bird.body);
+  
 }
 }
