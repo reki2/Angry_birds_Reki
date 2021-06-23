@@ -73,16 +73,24 @@ function draw(){
   woden2.display();
   woden3.display();
   pig1.display();
+  pig1.score();
   pig2.display();
+  pig2.score();
   pig3.display();
+  pig3.score();
   piggy1.display();
+  piggy1.score();
   piggy2.display();
+  piggy2.score();
   piggy3.display();
+  piggy3.score();
+
+
   t_r.display();
   
   textSize(25);
   fill("blue");
-  text("Puntos ="+ score,1000,100);
+  text("Puntos = "+ score,1000,100);
 
 }
 function mouseDragged(){
