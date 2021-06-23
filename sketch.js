@@ -18,12 +18,15 @@ var t_r;
 
 var gameState;
 
+var score;
+
 function preload() {
  backGround  = loadImage ("sprites/bg.png");
 }
 
 function setup(){
  createCanvas(1200,400);
+ score = 0;
  gameState = "on_Sling"
   engine = Engine.create();
   world = engine.world;
@@ -52,7 +55,8 @@ function setup(){
   //console.log(bird)
 }
 function draw(){
- background(backGround)
+ background(backGround);
+  
   Engine.update(engine);
   ground.display();
   plataform.display();
@@ -75,6 +79,11 @@ function draw(){
   piggy2.display();
   piggy3.display();
   t_r.display();
+  
+  textSize(25);
+  fill("blue");
+  text("Puntos ="+ score,1000,100);
+
 }
 function mouseDragged(){
   if(gameState != "launched")
