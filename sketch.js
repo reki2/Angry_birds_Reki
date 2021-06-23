@@ -53,6 +53,7 @@ function setup(){
   woden2 = new Logs(650,240,200,PI/2);
   woden3 = new Logs(650,210,200,PI/2);
   //console.log(bird)
+  getTime();
 }
 function draw(){
  background(backGround);
@@ -107,4 +108,12 @@ if(keyCode === 32){
   t_r.attach (bird.body);
   gameState = "on_Sling"
 }
+}
+
+function getTime(){
+var date = new Date();
+//console.log (date);
+var hour = date.getHours();
+console.log (hour);
+
 }

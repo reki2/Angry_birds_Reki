@@ -30,7 +30,7 @@ if(this.body.speed < 3){
 else{
   push();
   this.Visibility = this.Visibility -5;
-  console.log(this.Visibility);
+  //console.log(this.Visibility);
   tint(255, this.Visibility);
   image(this.image, this.body.position.x, this.body.position.y, this.width, this.height);
 World.remove(world, this.body);
