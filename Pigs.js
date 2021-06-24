@@ -1,5 +1,5 @@
 class Pigs extends Plane{
-  
+  //Hello there
 constructor(x,y,width,height){
    super(x,y,width,height);
    this.width = width;
