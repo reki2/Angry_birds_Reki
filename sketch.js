@@ -3,7 +3,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
-var backGround, bg = "sprites/bg2.png";
+var backGround, bg = "sprites/bg.png";
 var ground, plataform;
 
 var engine, world;
@@ -130,12 +130,5 @@ bg = "sprites/bg.png";
 bg = "sprites/bg2.jpg";
 }
 backGround = loadImage (bg);
-}
-
-function youWin(){
-if(score > 150){
-
-
-}
 }
 
