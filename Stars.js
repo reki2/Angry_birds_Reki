@@ -1,0 +1,14 @@
+class Stars{
+constructor(){
+
+
+    
+}
+
+display(){
+
+
+
+}
+
+}
