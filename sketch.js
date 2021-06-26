@@ -20,8 +20,13 @@ var gameState;
 
 var score;
 
+var stars, star_img;
+
 function preload() {
  getBackground();
+
+star_img = loadImage("sprites/star.png");
+
 }
 
 function setup(){
@@ -52,8 +57,8 @@ function setup(){
   woden1 = new Logs(650,300,200,PI/2);
   woden2 = new Logs(650,240,200,PI/2);
   woden3 = new Logs(650,210,200,PI/2);
-  //console.log(bird)
-  
+  //stars = createSprite(600,200,75,75);
+
 }
 function draw(){
  if(backGround){
@@ -97,6 +102,7 @@ function draw(){
   fill("blue");
   text("Puntos = "+ score,1000,100);
 
+  //drawSprites();
 }
 function mouseDragged(){
   if(gameState != "launched")
@@ -126,5 +132,12 @@ bg = "sprites/bg.png";
 bg = "sprites/bg2.jpg";
 }
 backGround = loadImage (bg);
+}
+
+function youWin(){
+if(score > 150){
+
 
 }
+}
+
