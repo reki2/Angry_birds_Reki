@@ -3,7 +3,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
-var backGround;
+var backGround, bg = "sprites/bg2.png";
 var ground, plataform;
 
 var engine, world;
@@ -21,7 +21,7 @@ var gameState;
 var score;
 
 function preload() {
- backGround  = loadImage ("sprites/bg.png");
+ getBackground();
 }
 
 function setup(){
@@ -53,11 +53,15 @@ function setup(){
   woden2 = new Logs(650,240,200,PI/2);
   woden3 = new Logs(650,210,200,PI/2);
   //console.log(bird)
-  getTime();
+  
 }
 function draw(){
- background(backGround);
+ if(backGround){
+   background(backGround);
+  }
   
+
+ 
   Engine.update(engine);
   ground.display();
   plataform.display();
@@ -105,15 +109,22 @@ function mouseReleased(){
 
 function keyPressed(){
 if(keyCode === 32){
+  Matter.Body.setPosition(bird.body,{x : 145,y : 110})
   t_r.attach (bird.body);
   gameState = "on_Sling"
 }
 }
 
-function getTime(){
+function getBackground(){
 var date = new Date();
 //console.log (date);
 var hour = date.getHours();
 console.log (hour);
+if(hour > 07 && hour < 20){
+bg = "sprites/bg.png";
+} else{
+bg = "sprites/bg2.jpg";
+}
+backGround = loadImage (bg);
 
 }

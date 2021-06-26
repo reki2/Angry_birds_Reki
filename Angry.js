@@ -16,8 +16,13 @@ display(){
   for(var i = 0; i < this.trajectory.length; i++){
     image(this.images, this.trajectory[i] [0], this.trajectory[i] [1]);
     }
+  
 } 
+if(this.body.position.x < 195){
+  this.trajectory = []
 
+
+}
 
   fill(220);
 }
