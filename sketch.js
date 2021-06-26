@@ -20,13 +20,10 @@ var gameState;
 
 var score;
 
-var stars, star_img;
+var star1, star_img;
 
 function preload() {
  getBackground();
-
-star_img = loadImage("sprites/star.png");
-
 }
 
 function setup(){
@@ -57,7 +54,7 @@ function setup(){
   woden1 = new Logs(650,300,200,PI/2);
   woden2 = new Logs(650,240,200,PI/2);
   woden3 = new Logs(650,210,200,PI/2);
-  //stars = createSprite(600,200,75,75);
+  star1 = new Stars()
 
 }
 function draw(){
@@ -94,15 +91,16 @@ function draw(){
   piggy2.score();
   piggy3.display();
   piggy3.score();
-
-
+  if(score > 149){
+    star1.display();
+ 
+  }
   t_r.display();
   
   textSize(25);
   fill("blue");
   text("Puntos = "+ score,1000,100);
 
-  //drawSprites();
 }
 function mouseDragged(){
   if(gameState != "launched")
